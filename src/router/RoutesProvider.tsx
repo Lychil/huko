@@ -1,5 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import AppContainer from "@/common/components/app-container/AppContainer";
+import Home from "@/pages/home/Home";
 
 export default function RoutesProvider() {
 
@@ -7,7 +8,7 @@ export default function RoutesProvider() {
         createRoutesFromElements(
             <>
                 <Route path="/" element={<AppContainer />}>
-                    <Route path="home" element={<></>} />
+                    <Route path="home" element={<Home />} />
                 </Route>
             </>
         )

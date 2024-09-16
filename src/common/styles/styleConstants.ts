@@ -7,10 +7,22 @@ export const colors = {
 
 export const font = {
     sizes: {
-        title: "20px"
+        title: "20px",
+        main: "16px"
     },
 
     weights: {
+        semiBold: 600,
         bold: 700
     }
+}
+
+export const border = {
+    styles: {
+        whiteSmall: `1px solid ${colors.whiteTotal}`
+    },
+
+    radius: {
+
+    },
 }
