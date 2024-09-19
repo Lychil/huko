@@ -12,7 +12,7 @@ border-bottom: ${border.styles.whiteSmall};
 export const NavPanelList = styled('ul')`
 display: flex;
 justify-content: center;
-gap: 5px;
+gap: 10px;
 `;
 
 export const NavPanelItem = styled('li')``;
