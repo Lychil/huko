@@ -33,3 +33,7 @@ export const border = {
         extraSmall: "5px"
     },
 }
+
+export const shadow = {
+    default: "0px 0px 8px 0px rgba(34, 60, 80, 0.2)"
+}

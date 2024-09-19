@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { border, colors, font } from "@/common/styles/styleConstants";
+import { border, colors, font, shadow } from "@/common/styles/styleConstants";
 
 export const EventCardWrapper = styled('div')`
 width: 250px;
@@ -8,6 +8,9 @@ overflow: hidden;
 display: grid;
 grid-template-rows: auto 1fr;
 background-color: ${colors.whiteTotal};
+-webkit-box-shadow: ${shadow.default};
+-moz-box-shadow: ${shadow.default};
+box-shadow: ${shadow.default};
 `;
 
 export const EventCardHeaderWrapper = styled('div')`
