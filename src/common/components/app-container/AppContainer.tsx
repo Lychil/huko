@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Header from "@/common/components/header/Header";
-import { Container } from "@/common/styles/styles";
+import NavPanel from "@/common/components/nav/NavPanel";
+import { AppContainerWrapper } from "@/common/components/app-container/styles";
 
 export default function AppContainer() {
     return (
-        <>
+        <AppContainerWrapper>
             <Header />
-            <Container>
-                <Outlet />
-            </Container>
-        </>
+            <NavPanel />
+            <Outlet />
+        </AppContainerWrapper>
     )
 }
