@@ -1,5 +1,15 @@
+import EventCreate from "@/common/components/event-create/EventCreate";
+import { Container } from "@/common/styles/styles";
+import { MyEventContent, MyEventWrapper } from "@/pages/my-event/styles";
+
 export default function MyEvent() {
     return (
-        <div>MyEvent</div>
+        <MyEventWrapper>
+            <Container>
+                <MyEventContent>
+                    <EventCreate />
+                </MyEventContent>
+            </Container>
+        </MyEventWrapper>
     )
 }

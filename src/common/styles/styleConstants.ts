@@ -12,6 +12,7 @@ export const font = {
     sizes: {
         title: "20px",
         main: "16px",
+        small: "14px",
         extraSmall: "12px",
     },
 
@@ -24,6 +25,9 @@ export const font = {
 
 export const border = {
     styles: {
+        input: `1px solid ${colors.accent}`,
+        inputFocus: `1px solid ${colors.main}`,
+        textareaDefaukt: `1px solid ${colors.accent}`,
         whiteSmall: `1px solid ${colors.whiteTotal}`
     },
 
@@ -36,4 +40,8 @@ export const border = {
 
 export const shadow = {
     default: "0px 0px 8px 0px rgba(34, 60, 80, 0.2)"
+}
+
+export const transition = {
+    fast: 'all 0.3s ease-in-out'
 }
