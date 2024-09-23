@@ -34,4 +34,12 @@ button {
     cursor: pointer;
     appearance: none;
 }
+
+input, textarea {
+    all: unset;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
 `;
