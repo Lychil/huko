@@ -72,5 +72,18 @@ transition: ${transition.fast};
 `;
 // -------------------------------------------------------
 
+export const EventCreateBtn = styled('button')`
+margin: 0 auto;
+padding: 10px;
+width: 50%;
+border-radius: ${border.radius.medium};
+border: ${border.styles.input};
+transition: ${transition.fast};
 
+&:hover {
+    color: ${colors.whiteTotal};
+    background-color: ${colors.main};
+    border: ${border.styles.inputFocus};
+}
+`;
 

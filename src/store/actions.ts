@@ -1,7 +1,10 @@
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
+import { newEventActions } from "./reducers/events/newEventSlice";
 
-const actions = {};
+const actions = {
+    ...newEventActions
+};
 
 
 export const useActions = () => {

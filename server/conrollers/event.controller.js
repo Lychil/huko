@@ -12,6 +12,7 @@ class EventController {
 
     async getEvents(req, res) {
         const events = await db.query(`select * from event`);
+        console.log("send", events.rows);
         res.json(events.rows);
     }
 }

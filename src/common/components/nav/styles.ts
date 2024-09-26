@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { border, colors, font } from "@/common/styles/styleConstants";
+import { border, colors, font, transition } from "@/common/styles/styleConstants";
 import { Link } from "react-router-dom";
 
 export const NavPanelWrapper = styled('nav')`
@@ -17,8 +17,16 @@ gap: 10px;
 
 export const NavPanelItem = styled('li')``;
 
-export const NavPanelLink = styled(Link)`
+export const NavPanelLink = styled(Link)<{$isActive: boolean}>`
 font-size: ${font.sizes.main};
 font-weight: ${font.weights.semiBold};
+color: ${props => props.$isActive ? colors.whiteTotal : colors.whiteTransparent};
+
+${props => !props.$isActive &&
+`
+transition: ${transition.fast};
+&:hover {
 color: ${colors.whiteTotal};
+}
+`}
 `;
