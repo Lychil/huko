@@ -1,21 +1,23 @@
 import { DefaultFormItem, DefaultInput, DefaultLabel, DefaultTextarea } from "@/common/styles/styles";
+import { IChangeEventFields, KeysEventEnum } from "@/store/reducers/events/eventsApi";
 
 interface DefaultItemFormProps {
     labelText: string,
     placeholder?: string,
+    nameInput: KeysEventEnum
     typeInput: "input" | "textarea",
     type?: "time" | "text",
     inputState: string,
-    setInput: (arg: string) => void,
+    setInput: (arg: IChangeEventFields) => void,
     inputWidth?: string,
     inputHeight?: string,
 }
 
 export default function DefaultItemForm(props: DefaultItemFormProps) {
-    const { setInput } = props;
+    const { setInput, nameInput } = props;
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInput(e.target.value);
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+        setInput({key: nameInput, value: e.target.value});
     }
 
     return (
@@ -33,7 +35,8 @@ export default function DefaultItemForm(props: DefaultItemFormProps) {
                 <DefaultTextarea
                     width={props.inputWidth}
                     height={props.inputHeight}
-
+                    value={props.inputState}
+                    onChange={handleChange}
                     placeholder={props.placeholder}
                 />
             }

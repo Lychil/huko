@@ -3,17 +3,23 @@ import clockImg from "@/common/images/svg/clock.svg";
 import eventImg from "@/common/images/event.jpg";
 import heartImg from "@/common/images/svg/heart.svg";
 
-export default function EventCardHeader() {
+interface EventCardHeaderProps {
+    location: string,
+    start: string,
+    finish: string
+}
+
+export default function EventCardHeader({location, start, finish}: EventCardHeaderProps) {
     return (
         <EventCardHeaderWrapper>
             <EventCardHeaderImg src={eventImg} />
-            <EventCardLocation title="Плехановская ул., 12офис 202, этаж 2">Плехановская ул., 12офис 202, этаж 2</EventCardLocation>
+            <EventCardLocation title={location}>{location}</EventCardLocation>
             <EventCardFavouriteBtn>
                 <EventCardFavouriteImg src={heartImg} />
             </EventCardFavouriteBtn>
             <EventCardClock>
                 <EventCardClockImg src={clockImg} />
-                <EventCardClockText>12:00 - 20:00</EventCardClockText>
+                <EventCardClockText>{start} - {finish}</EventCardClockText>
             </EventCardClock>
         </EventCardHeaderWrapper>
     )

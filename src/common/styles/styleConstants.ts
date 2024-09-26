@@ -5,7 +5,8 @@ export const colors = {
     overlay: "rgba(220, 220, 220, 0.7)",
 
     blackTotal: "rgba(0, 0, 0, 1)",
-    whiteTotal: "rgba(255, 255, 255, 1)"
+    whiteTotal: "rgba(255, 255, 255, 1)",
+    whiteTransparent: "rgba(255, 255, 255, 0.5)"
 }
 
 export const font = {

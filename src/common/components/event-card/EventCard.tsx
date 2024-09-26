@@ -1,20 +1,20 @@
 import EventCardHeader from "@/common/components/event-card/EventCardHeader";
 import EventCardIndicators from "@/common/components/event-card/EventCardIndicators";
 import { EventCardContent, EventCardDesc, EventCardTitle, EventCardWrapper } from "@/common/components/event-card/styles";
+import { IEvent } from "@/store/reducers/events/eventsApi";
 
-export default function EventCard() {
+export default function EventCard({event}: {event: IEvent}) {
+    const {title, description, location, start, finish, click, want, favourite} = event;
+
     return (
         <EventCardWrapper>
-            <EventCardHeader />
+            <EventCardHeader location={location} start={start} finish={finish} />
             <EventCardContent>
-                <EventCardTitle>Мероприятие в честь 20 летия клуба и чего то там еще</EventCardTitle>
+                <EventCardTitle>{title}</EventCardTitle>
                 <EventCardDesc>
-                    sdfsjkdf dsjfsjdkfj dkfjdsfjk fsfsjfsdj fsfdnjsdf sdjfdsf sdfjsdfjs dsfdsjf sdfdsfjs
-                    sdfjdsjf sdfsjf dsfsdfds sfsdf sf fdsfs fdsf f dsfsdf f dsf dsf dsf s df sf  df describe
-                    fdsfsf sdfsf dsfdf sfdsf dsf sf f dsf fd s hfdshsf dghfghfds fdsbhfghfds bfdhfd dsfjhfsdgfshdfg
-                    fsdjfdsjfsfdsffds ffsfsfdsfsdfsfs dsfsfsddfsfds dsfsfdsfdsfdsf dsfsfds
+                    {description}
                 </EventCardDesc>
-                <EventCardIndicators />
+                <EventCardIndicators indicators={[click || 0, want || 0, favourite || 0]} />
             </EventCardContent>
         </EventCardWrapper>
     )

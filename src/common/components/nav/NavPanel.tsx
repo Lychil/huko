@@ -1,5 +1,7 @@
+import { useLocation } from "react-router-dom";
 import { Container } from "@/common/styles/styles";
-import { NavPanelItem, NavPanelLink, NavPanelList, NavPanelWrapper } from "./styles";
+import { NavPanelItem, NavPanelLink, NavPanelList, NavPanelWrapper } from "@/common/components/nav/styles";
+
 
 const items: { id: number, text: string, to: string }[] = [
     {
@@ -20,6 +22,8 @@ const items: { id: number, text: string, to: string }[] = [
 ]
 
 export default function NavPanel() {
+    const location = useLocation();
+
     return (
         <NavPanelWrapper>
             <Container>
@@ -27,7 +31,7 @@ export default function NavPanel() {
                     {
                         items.map((item) => (
                             <NavPanelItem key={item.id}>
-                                <NavPanelLink to={item.to}>{item.text}</NavPanelLink>
+                                <NavPanelLink $isActive={location.pathname === item.to} to={item.to}>{item.text}</NavPanelLink>
                             </NavPanelItem>
                         ))
                     }
