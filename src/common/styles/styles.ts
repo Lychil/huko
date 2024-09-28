@@ -7,6 +7,14 @@ max-width: 1140px;
 padding-inline: 20px;
 `;
 
+export const FormItem = styled('div')`
+width: 100%;
+display: flex;
+flex-direction: column;
+text-align: left;
+gap: 5px;
+`;
+
 export const DefaultFormItem = styled('div')`
 display: flex;
 flex-direction: column;

@@ -1,4 +1,4 @@
-import { EventCardIndicator, EventCardIndicatorImg, EventCardIndicatorsWrapper, EventCardIndicatorText } from "@/common/components/event-card/styles";
+import { EventCardIndicator, EventCardIndicatorImg, EventCardIndicatorsWrapper, EventCardIndicatorText } from "@/common/components/events/event-card/styles";
 import heartImg from "@/common/images/svg/heart.svg";
 import peopleImg from "@/common/images/svg/people.svg";
 import clickImg from "@/common/images/svg/click.svg";

@@ -1,4 +1,4 @@
-import { SponsorsWidgetWrapper, SponsorWidget, SponsorWidgetLogo, SponsorWidgetQuantity, SponsorWidgetQuantityCount, SponsorWidgetQuantityImg } from "@/common/components/sponsors-widget/styles";
+import { SponsorsWidgetWrapper, SponsorWidget, SponsorWidgetLogo, SponsorWidgetQuantity, SponsorWidgetQuantityCount, SponsorWidgetQuantityImg } from "@/common/components/widgets/sponsors-widget/styles";
 import tLogoImg from "@/common/images/svg/t-logo.svg";
 import fireImg from "@/common/images/svg/fire.svg";
 

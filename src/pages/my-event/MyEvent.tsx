@@ -1,4 +1,4 @@
-import EventCreate from "@/common/components/event-create/EventCreate";
+import EventCreate from "@/common/components/events/event-create/EventCreate";
 import { Container } from "@/common/styles/styles";
 import { MyEventContent, MyEventWrapper } from "@/pages/my-event/styles";
 

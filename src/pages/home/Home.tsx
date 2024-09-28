@@ -1,6 +1,6 @@
-import EventsList from "@/common/components/events-list/EventsList";
-import SponsorsWidget from "@/common/components/sponsors-widget/SponsorsWidget";
-import Widget from "@/common/components/widget/Widget";
+import EventsList from "@/common/components/events/events-list/EventsList";
+import SponsorsWidget from "@/common/components/widgets/sponsors-widget/SponsorsWidget";
+import Widget from "@/common/components/widgets/widget/Widget";
 import { Container } from "@/common/styles/styles";
 import { HomeContent, HomeList, HomeWidjets, HomeWrapper } from "@/pages/home/styles";
 
