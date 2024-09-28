@@ -6,7 +6,8 @@ export const colors = {
 
     blackTotal: "rgba(0, 0, 0, 1)",
     whiteTotal: "rgba(255, 255, 255, 1)",
-    whiteTransparent: "rgba(255, 255, 255, 0.5)"
+    whiteTransparent: "rgba(255, 255, 255, 0.5)",
+    transparent: "rgba(0, 0, 0, 0)"
 }
 
 export const font = {
@@ -26,10 +27,12 @@ export const font = {
 
 export const border = {
     styles: {
+        mainSmall: `1px solid ${colors.main}`,
         input: `1px solid ${colors.accent}`,
         inputFocus: `1px solid ${colors.main}`,
         textareaDefaukt: `1px solid ${colors.accent}`,
-        whiteSmall: `1px solid ${colors.whiteTotal}`
+        whiteSmall: `1px solid ${colors.whiteTotal}`,
+        transparent: `1px solid ${colors.transparent}`,
     },
 
     radius: {

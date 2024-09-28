@@ -37,6 +37,7 @@ button {
 
 input, textarea {
     all: unset;
+    box-sizing: border-box;
 
     &::-webkit-scrollbar {
         width: 0;

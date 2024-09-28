@@ -1,7 +1,7 @@
 import { useGetEventsQuery } from '@/store/reducers/events/eventsApi';
 import { useEffect } from 'react';
-import EventCard from '@/common/components/event-card/EventCard';
-import { EventsListWrapper } from '@/common/components/events-list/styles';
+import EventCard from '@/common/components/events/event-card/EventCard';
+import { EventsListWrapper } from '@/common/components/events/events-list/styles';
 
 export default function EventsList() {
     const { data: events, isLoading } = useGetEventsQuery();

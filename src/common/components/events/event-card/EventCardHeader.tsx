@@ -1,4 +1,4 @@
-import { EventCardClock, EventCardClockImg, EventCardClockText, EventCardFavouriteBtn, EventCardFavouriteImg, EventCardHeaderImg, EventCardHeaderWrapper, EventCardLocation } from '@/common/components/event-card/styles'
+import { EventCardClock, EventCardClockImg, EventCardClockText, EventCardFavouriteBtn, EventCardFavouriteImg, EventCardHeaderImg, EventCardHeaderWrapper, EventCardLocation } from '@/common/components/events/event-card/styles'
 import clockImg from "@/common/images/svg/clock.svg";
 import eventImg from "@/common/images/event.jpg";
 import heartImg from "@/common/images/svg/heart.svg";

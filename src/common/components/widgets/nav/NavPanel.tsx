@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { Container } from "@/common/styles/styles";
-import { NavPanelItem, NavPanelLink, NavPanelList, NavPanelWrapper } from "@/common/components/nav/styles";
+import { NavPanelItem, NavPanelLink, NavPanelList, NavPanelWrapper } from "@/common/components/widgets/nav/styles";
 
 
 const items: { id: number, text: string, to: string }[] = [

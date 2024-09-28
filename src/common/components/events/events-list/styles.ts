@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const EventsListWrapper = styled('div')`
 display: flex;
-justify-content: left;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 gap: 10px;
 `;

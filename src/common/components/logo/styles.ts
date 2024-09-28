@@ -1,5 +1,3 @@
 import styled from "styled-components";
 
-export const DefaultLogo = styled('img')`
-cursor: pointer;
-`;
+export const DefaultLogo = styled('img')``;
