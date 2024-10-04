@@ -1,13 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IChangeEventFields, IEvent } from "@/store/reducers/events/eventsApi";
 
-const initialState: IEvent = {
-    title: "",
-    location: "",
-    description: "",
-    start: "",
-    finish: "",
-}
+const initialState: IEvent = <IEvent>{};
 
 
 export const newEventSlice = createSlice({

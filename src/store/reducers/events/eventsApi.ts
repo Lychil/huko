@@ -28,7 +28,7 @@ export enum KeysEventEnum {
 
 export const eventsApi = createApi({
     reducerPath: 'eventsApi',
-    baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
+    baseQuery: fetchBaseQuery({ baseUrl: baseUrl, credentials: "include" }),
     endpoints: (builder) => ({
         createEvent: builder.mutation<void, IEvent>({
             query: (event) => ({
