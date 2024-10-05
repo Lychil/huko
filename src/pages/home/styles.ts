@@ -8,8 +8,7 @@ flex-grow: 1;
 export const HomeContent = styled('div')`
 padding: 20px 0;
 display: grid;
-grid-template-columns: 1fr 300px;
-gap: 20px;
+grid-template-columns: 1fr auto;
 `;
 
 export const HomeList = styled('section')`

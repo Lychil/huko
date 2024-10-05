@@ -44,7 +44,4 @@ export const {
     useLoginMutation
 } = userApi;
 
-export const checkIsAuth = (): boolean => {
-    const {data: isAuth} = useIsAuthQuery();
-    return !!isAuth?.email;
-}
+export const checkIsAuth = (): boolean => !!useIsAuthQuery().data?.email;

@@ -8,7 +8,7 @@ import Login from "@/common/components/auth/login/Login";
 import { checkIsAuth } from "@/store/reducers/user/userApi";
 
 export default function RoutesProvider() {
-    const isAuthUser: boolean = checkIsAuth() || false;
+    const isAuthUser: boolean = checkIsAuth();
 
     const notAuthProvider = createBrowserRouter(
         createRoutesFromElements(
@@ -18,8 +18,8 @@ export default function RoutesProvider() {
                         <Route path="reg" element={<Reg />} />
                         <Route path="login" element={<Login />} />
                     </Route>
-                    <Route path='*' element={<Navigate to='auth/login' replace />} />
                 </Route>
+                <Route path="*" element={<Navigate to="/auth/login" replace />} />
             </>
         )
     )
@@ -30,8 +30,9 @@ export default function RoutesProvider() {
                 <Route path="/" element={<AppContainer />}>
                     <Route path="home" element={<Home />} />
                     <Route path="create" element={<MyEvent />} />
-                    <Route path='*' element={<Navigate to='home' replace />} />
                 </Route>
+                {/* <Route path="/error" element={<Error />} /> */}
+                <Route path="*" element={<Navigate to="/home" replace />} />
             </>
         )
     );

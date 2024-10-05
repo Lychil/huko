@@ -6,7 +6,7 @@ import { userApi } from "./reducers/user/userApi";
 import { userReducer } from "./reducers/user/userSlice";
 
 const rememberedReducers = [
-    ""
+    userApi.reducerPath
 ];
 
 const rootReducer = combineReducers({
