@@ -1,8 +1,6 @@
 import EventsList from "@/common/components/events/events-list/EventsList";
-import SponsorsWidget from "@/common/components/widgets/sponsors-widget/SponsorsWidget";
-import Widget from "@/common/components/widgets/widget/Widget";
 import { Container } from "@/common/styles/styles";
-import { HomeContent, HomeList, HomeWidjets, HomeWrapper } from "@/pages/home/styles";
+import { HomeContent, HomeList, HomeWrapper } from "@/pages/home/styles";
 
 export default function Home() {
     return (
@@ -12,14 +10,15 @@ export default function Home() {
                     <HomeList>
                         <EventsList />
                     </HomeList>
-                    <HomeWidjets>
+                    {/* NO DELETE */}
+                    {/* <HomeWidjets>
                         <Widget title="Топ спонсоры">
                             <SponsorsWidget />
                         </Widget>
                         <Widget title="Топ мероприятия">
                             <SponsorsWidget />
                         </Widget>
-                    </HomeWidjets>
+                    </HomeWidjets> */}
                 </HomeContent>
             </Container>
         </HomeWrapper>

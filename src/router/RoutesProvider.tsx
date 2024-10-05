@@ -1,4 +1,4 @@
-import { createBrowserRouter, createRoutesFromElements, Navigate, Outlet, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from "react-router-dom";
 import AppContainer from "@/common/components/app-container/AppContainer";
 import Home from "@/pages/home/Home";
 import MyEvent from "@/pages/my-event/MyEvent";
@@ -8,7 +8,7 @@ import Login from "@/common/components/auth/login/Login";
 import { checkIsAuth } from "@/store/reducers/user/userApi";
 
 export default function RoutesProvider() {
-    const isAuthUser: boolean = checkIsAuth() || false;
+    const isAuthUser: boolean = checkIsAuth();
 
     const notAuthProvider = createBrowserRouter(
         createRoutesFromElements(
@@ -18,7 +18,6 @@ export default function RoutesProvider() {
                         <Route path="reg" element={<Reg />} />
                         <Route path="login" element={<Login />} />
                     </Route>
-                    <Route path='*' element={<Navigate to='auth/login' replace />} />
                 </Route>
             </>
         )
@@ -30,7 +29,6 @@ export default function RoutesProvider() {
                 <Route path="/" element={<AppContainer />}>
                     <Route path="home" element={<Home />} />
                     <Route path="create" element={<MyEvent />} />
-                    <Route path='*' element={<Navigate to='home' replace />} />
                 </Route>
             </>
         )

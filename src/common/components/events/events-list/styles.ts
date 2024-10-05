@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const EventsListWrapper = styled('div')`
 display: flex;
-flex-wrap: nowrap;
-gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
 `;

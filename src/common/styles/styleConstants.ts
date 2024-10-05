@@ -3,6 +3,7 @@ export const colors = {
     placeholder: "rgba(200, 200, 200, 1)",
     accent: "rgba(110, 110, 110, 1);",
     overlay: "rgba(220, 220, 220, 0.7)",
+    details: "rgba(200, 200, 200, 1)",
 
     blackTotal: "rgba(0, 0, 0, 1)",
     whiteTotal: "rgba(255, 255, 255, 1)",

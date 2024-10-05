@@ -1,134 +1,88 @@
 import styled from "styled-components";
-import { border, colors, font, shadow } from "@/common/styles/styleConstants";
+import { border, colors, font, shadow, transition } from "@/common/styles/styleConstants";
+import { glass, smoothlyAnim } from "@/common/styles/mixins";
 
-export const EventCardWrapper = styled('div')`
-width: 250px;
-height: 350px;
-overflow: hidden;
+export const EventCardWrapper = styled('div') <{ image: string }>`
+cursor: pointer;
+position: relative;
+width: 300px;
+height: 300px;
 display: grid;
 grid-template-rows: auto 1fr;
-background-color: ${colors.whiteTotal};
+border-radius: ${border.radius.medium};
+background-image: url(${props => props.image}), linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0,0,0,0) 80%);
+background-size: cover;
 -webkit-box-shadow: ${shadow.default};
 -moz-box-shadow: ${shadow.default};
 box-shadow: ${shadow.default};
+transition: ${transition.fast};
+
+&:hover {
+    margin-top: -5px;
+}
 `;
 
-export const EventCardHeaderWrapper = styled('div')`
+export const EventCardFront = styled('div')`
 position: relative;
-height: 150px;
-background-color: ${colors.placeholder};
+border-radius: inherit;
+display: flex;
+padding: 20px;
+height: inherit;
+background-image: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(0,0,0,0) 100%);
+animation: ${smoothlyAnim} 1.5s forwards;
 `;
 
-export const EventCardHeaderImg = styled('img')`
-width: 100%;
-height: 100%;
-background-size: cover;
-`;
-
-export const EventCardLocation = styled('div')`
-cursor: pointer;
+export const EventCardDayWrapper = styled('div')`
 position: absolute;
-top: 5px;
-left: 5px;
 padding: 5px;
-max-width: 50%;
-overflow: hidden;
-font-size: ${font.sizes.extraSmall};
-white-space: nowrap;
-text-overflow: ellipsis;
-border-radius: ${border.radius.medium};
-background-color: ${colors.overlay};
-`;
-
-export const EventCardClock = styled('div')`
-position: absolute;
-bottom: 5px;
-left: 5px;
-padding: 5px;
-display: flex;
-gap: 5px;
-border-radius: ${border.radius.medium};
-background-color: ${colors.overlay};
-`;
-
-export const EventCardClockText = styled('p')`
-margin: auto 0;
-font-size: ${font.sizes.extraSmall};
-`;
-
-export const EventCardClockImg = styled('img')`
-width: 20px;
-height: 20px;
-`;
-
-export const EventCardFavouriteBtn = styled('button')`
-position: absolute;
-top: 5px;
-right: 5px;
-padding: 5px;
-display: flex;
-border-radius: ${border.radius.circle};
-background-color: ${colors.overlay};
-`;
-
-export const EventCardFavouriteImg = styled('img')`
-margin: auto 0;
-height: 20px;
-width: 20px;
-`;
-
-export const EventCardContent = styled('div')`
-cursor: pointer;
-flex-grow: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 10px;
-`;
-
-export const EventCardTitle = styled('p')`
-display: -webkit-box;
-overflow: hidden;
--webkit-line-clamp: 2;
-line-clamp: 2;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
-font-size: ${font.sizes.title};
-font-weight: ${font.weights.semiBold};
-`;
-
-export const EventCardDesc = styled('p')`
-display: -webkit-box;
-overflow: hidden;
--webkit-line-clamp: 4;
-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
-color: ${colors.accent};
-font-size: ${font.sizes.main};
-font-weight: ${font.weights.medium};
-`;
-
-export const EventCardIndicatorsWrapper = styled('div')`
-display: flex;
-gap: 5px;
-`;
-
-export const EventCardIndicator = styled('div')`
-display: flex;
-gap: 2px;
-padding: 4px;
+text-align: center;
+color: ${colors.whiteTotal};
+top: 20px;
+left: 20px;
 border-radius: ${border.radius.extraSmall};
-background-color: ${colors.placeholder};
+${glass}
 `;
 
-export const EventCardIndicatorText = styled('p')`
-margin: auto 0;
+export const EventCardDayNumber = styled('p')`
+font-size: ${font.sizes.title};
+font-weight: ${font.weights.bold};
+`;
+
+export const EventCardDayMonth = styled('p')`
 font-size: ${font.sizes.extraSmall};
-font-weight: ${font.weights.medium};
+font-weight: ${font.weights.bold};
 `;
 
-export const EventCardIndicatorImg = styled('img')`
-height: 20px;
-width: 20px;
+
+export const EventCardInfoWrapper = styled('div')`
+margin-top: auto;
+width: 100%;
+`;
+
+export const EventCardInfoTitle = styled('div')`
+font-size: ${font.sizes.title};
+font-weight: ${font.weights.medium};
+color: ${colors.whiteTotal};
+margin-bottom: 15px;
+`;
+
+export const EventCardBack = styled('div')`
+height: inherit;
+padding: 20px;
+border-radius: inherit;
+background-color: rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(2px);
+color: ${colors.whiteTotal};
+animation: ${smoothlyAnim} 1s forwards;
+`;
+
+export const EventCardDescTitle = styled('p')`
+font-size: ${font.sizes.main};
+font-weight: ${font.weights.semiBold};
+margin-bottom: 10px;
+`;
+
+export const EventCardDescText = styled('p')`
+font-size: ${font.sizes.small};
+font-weight: ${font.weights.medium};
 `;
