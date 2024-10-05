@@ -1,10 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useInput } from "@/common/hooks/useInput";
-import { FormItem } from "@/common/styles/styles";
+import { useLoginMutation } from "@/store/reducers/user/userApi";
 import { Button, Input, Label } from "@/common/styles/ui/ui";
 import { AuthChange, AuthChangeLink, AuthItemForm, AuthItemWrapper, AuthTitle } from "@/common/components/auth/styles";
+import { FormItem } from "@/common/styles/styles";
 import { routes } from "@/router/routes";
-import { useLoginMutation } from "@/store/reducers/user/userApi";
-import { useNavigate } from "react-router-dom";
 
 const regPath = routes.regPath;
 const homePath = routes.homePath;
@@ -17,15 +17,13 @@ export default function Login() {
 
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
-        await login({ email: email.value, password: password.value }).then(res => {
-            if (res.error && 'data' in res.error) {
-                const error = res.error.data as {error: string};
-                console.log(error);
-            } else {
-                navigate(homePath);
-            }
+        const response = await login({ email: email.value, password: password.value }).then(res => res);
+        if (response.error && 'data' in response.error) {
+            // ToDo
+            const error = response.error.data as { error: string };
+        } else {
+            navigate(homePath);
         }
-        )
     }
 
     return (

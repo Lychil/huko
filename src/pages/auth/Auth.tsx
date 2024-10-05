@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import Logo from "@/common/components/logo/Logo";
 
 export default function Auth() {
+
     return (
         <AuthWrapper>
             <Form width="300px">

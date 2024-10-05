@@ -1,16 +1,17 @@
-import { EventCardBack, EventCardDayMonth, EventCardDayNumber, EventCardDayWrapper, EventCardDescText, EventCardDescTitle, EventCardFront, EventCardInfoTitle, EventCardInfoWrapper, EventCardWrapper } from "@/common/components/events/event-card/styles";
-import { IEvent } from "@/store/reducers/events/eventsApi";
-import bgImg from "@/common/images/bg.jpeg";
+import { useState } from "react";
 import EventCardDetails from "./EventCardDetails";
 import EventCardIndicators from "./EventCardIndicators";
-import { useState } from "react";
 import EventCardSwaper from "./EventCardSwaper";
+import { EventCardBack, EventCardDayMonth, EventCardDayNumber, EventCardDayWrapper, EventCardDescText, EventCardDescTitle, EventCardFront, EventCardInfoTitle, EventCardInfoWrapper, EventCardWrapper } from "@/common/components/events/event-card/styles";
+import { IEvent } from "@/store/reducers/events/eventsApi";
+import { CardSidesType } from "@/common/components/events/event-card/types";
+import bgImg from "@/common/images/bg.jpeg";
 
 export default function EventCard({ event }: { event: IEvent }) {
     const { title, location, description, start, finish, click, want, favourite } = event;
-    const [activeSide, setActiveSide] = useState<"front" | "back">("front");
+    const [activeSide, setActiveSide] = useState<CardSidesType>("front");
 
-    const handleChange = (arg: "back" | "front") =>{
+    const handleChange = (arg: CardSidesType) =>{
         setActiveSide(arg);
     }
 

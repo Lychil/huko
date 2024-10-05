@@ -13,6 +13,7 @@ export const colors = {
 
 export const font = {
     sizes: {
+        error: "48px",
         title: "20px",
         main: "16px",
         small: "14px",

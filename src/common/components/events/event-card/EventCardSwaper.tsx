@@ -1,6 +1,7 @@
+import styled from "styled-components";
 import { border, colors } from "@/common/styles/styleConstants";
 import { glass } from "@/common/styles/mixins";
-import styled from "styled-components"
+import { CardSidesType } from "@/common/components/events/event-card/types";
 
 const SwaperWrapper = styled('div')`
 cursor: default;
@@ -24,8 +25,8 @@ aspect-ratio: 1;
 `;
 
 interface EventCardSwaperProps {
-    activeSide: "front" | "back"
-    handleChange: (arg: "front" | "back") => void
+    activeSide: CardSidesType
+    handleChange: (arg: CardSidesType) => void
 }
 
 export default function EventCardSwaper({activeSide, handleChange}: EventCardSwaperProps) {

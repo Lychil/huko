@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { border, font } from "@/common/styles/styleConstants";
+import { border, colors, font } from "@/common/styles/styleConstants";
 import { glass } from "@/common/styles/mixins";
 import clickImg from "@/common/images/svg/click.svg";
 import heartImg from "@/common/images/svg/heart.svg";
@@ -11,6 +11,7 @@ top: 20px;
 right: 20px;
 display: flex;
 gap: 5px;
+color: ${colors.whiteTotal};
 `;
 
 const Indicator = styled('div')`
@@ -41,17 +42,17 @@ interface EventCardIndicatorsProps {
 export default function EventCardIndicators({want, favourite, click}: EventCardIndicatorsProps) {
     return (
         <IndicatorsWrapper>
-            <Indicator>
+            <Indicator title="Количество переходов">
                 <IndicatorImg src={clickImg} />
                 <IndicatorCount>{click}</IndicatorCount>
             </Indicator>
 
-            <Indicator>
+            <Indicator title="Хотят пойти">
                 <IndicatorImg src={peopleImg} />
                 <IndicatorCount>{want}</IndicatorCount>
             </Indicator>
 
-            <Indicator>
+            <Indicator title="Добавлено в избранное">
                 <IndicatorImg src={heartImg} />
                 <IndicatorCount>{favourite}</IndicatorCount>
             </Indicator>

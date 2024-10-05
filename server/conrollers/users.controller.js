@@ -15,7 +15,6 @@ class UsersController {
             [email, password, 'user']
         );
         const user = {email: newUser.rows[0].email};
-        console.log("user", user);
         res.cookie('auth', user, {
             maxAge: 9000000000, // Время жизни в миллисекундах
             httpOnly: true, // Доступно только через HTTP(S), не доступно через JavaScript

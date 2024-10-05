@@ -1,4 +1,4 @@
-import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Navigate, Outlet, Route, RouterProvider } from "react-router-dom";
 import AppContainer from "@/common/components/app-container/AppContainer";
 import Home from "@/pages/home/Home";
 import MyEvent from "@/pages/my-event/MyEvent";
@@ -19,6 +19,7 @@ export default function RoutesProvider() {
                         <Route path="login" element={<Login />} />
                     </Route>
                 </Route>
+                <Route path="*" element={<Navigate to="/auth/login" replace />} />
             </>
         )
     )
@@ -30,6 +31,8 @@ export default function RoutesProvider() {
                     <Route path="home" element={<Home />} />
                     <Route path="create" element={<MyEvent />} />
                 </Route>
+                {/* <Route path="/error" element={<Error />} /> */}
+                <Route path="*" element={<Navigate to="/home" replace />} />
             </>
         )
     );
